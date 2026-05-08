@@ -1,4 +1,4 @@
-import { Zap, Sparkles, History, Network } from "lucide-react"
+import { Zap, Lightbulb, History, Network } from "lucide-react"
 
 const features = [
   {
@@ -8,11 +8,11 @@ const features = [
     accent: "from-emerald-400 to-green-500",
   },
   {
-    icon: Sparkles,
-    title: "AI Strategy Builder",
-    description: "5 pre-built AI strategies back-tested across 10 years of market data. Pick one, deploy it, let the machine work.",
+    icon: Lightbulb,
+    title: "Strategy Library",
+    description: "5 hand-picked strategies, each tested across 10 years of real markets. Built by traders who actually run them — pick one and you're trading the same setup we are.",
     accent: "from-amber-400 to-emerald-500",
-    badge: "AI",
+    badge: "Curated",
   },
   {
     icon: History,

@@ -17,7 +17,7 @@ const benefits = [
   {
     icon: Gift,
     value: "5",
-    label: "AI Strategies",
+    label: "Curated Strategies",
   },
   {
     icon: Banknote,

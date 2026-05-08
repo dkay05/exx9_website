@@ -240,15 +240,16 @@ export function PipCalculatorSection() {
 
           {/* Info Panel */}
           <div className="lg:col-span-2 space-y-4">
-            {/* AI-powered risk engine */}
+            {/* Built-in risk helper */}
             <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-6 shadow-lg">
               <div className="flex items-center gap-2 mb-4">
                 <TrendingUp className="w-5 h-5 text-primary" />
-                <h3 className="font-semibold text-white">AI-Powered Risk Engine</h3>
+                <h3 className="font-semibold text-white">Built-in Risk Helper</h3>
               </div>
               <p className="text-sm text-white/80 leading-relaxed">
-                Our AI-powered risk engine automatically adjusts your copied lot sizes based on
-                your account balance — so you never over-leverage by accident.
+                We watch your account size and automatically right-size every copied trade —
+                so you never accidentally over-leverage just because the trader you're copying
+                runs a bigger account.
               </p>
             </div>
 

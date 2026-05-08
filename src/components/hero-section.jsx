@@ -19,7 +19,7 @@ export function HeroSection() {
           <div className="relative px-6 sm:px-10 lg:px-14 py-14 sm:py-20 lg:py-24 min-h-[500px] sm:min-h-[600px] lg:min-h-[680px] flex">
             {/* Left content */}
             <div className="text-white max-w-2xl my-auto">
-              <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-[3.25rem] font-bold leading-[1.1] tracking-tight">
+              <h1 className="text-2xl sm:text-3xl lg:text-4xl xl:text-[2.5rem] font-bold leading-[1.15] tracking-tight">
                 Copy Trading,
                 <span className="brand-gradient-text ml-3">Finally Done Right.</span>
                 <span className="block mt-5 sm:mt-6 text-white/85 text-base sm:text-lg lg:text-xl font-medium leading-relaxed">

@@ -36,20 +36,6 @@ export function MobileAppSection() {
               </Button>
             </div>
 
-            {/* QR Code */}
-            <div className="mt-8 inline-flex items-center gap-4 bg-white/10 backdrop-blur-sm rounded-2xl p-4">
-              <div className="w-20 h-20 bg-white rounded-xl flex items-center justify-center">
-                <div className="grid grid-cols-4 gap-1">
-                  {[...Array(16)].map((_, i) => (
-                    <div key={i} className={`w-3 h-3 rounded-sm ${Math.random() > 0.5 ? 'bg-foreground' : 'bg-transparent'}`} />
-                  ))}
-                </div>
-              </div>
-              <div className="text-left">
-                <div className="text-sm text-white/60">Scan to download</div>
-                <div className="font-semibold">Get the app</div>
-              </div>
-            </div>
           </div>
 
           {/* Right - Phone Mockup */}

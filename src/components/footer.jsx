@@ -6,7 +6,7 @@ const footerLinks = {
     title: "Platform",
     links: [
       { label: "Copy Trading", href: "/markets/forex" },
-      { label: "AI Strategies", href: "/tools/trading-platform" },
+      { label: "Strategy Library", href: "/tools/trading-platform" },
       { label: "Backtesting", href: "/tools/heatmap" },
       { label: "Dashboard", href: "/accounts/types" },
       { label: "Pricing", href: "/accounts/types" },

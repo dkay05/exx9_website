@@ -8,7 +8,7 @@ const awards = [
   },
   {
     year: "2024",
-    title: "Best AI Trading Tools — FinTech India",
+    title: "Best Trader-Built Tools — FinTech India",
     icon: Award,
   },
   {

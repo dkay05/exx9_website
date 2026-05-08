@@ -1,80 +1,54 @@
-﻿import { Button } from "@/components/ui/button"
-import { ArrowRight, TrendingUp, Users, Award } from "lucide-react"
+import { Button } from "@/components/ui/button"
+import { ArrowRight } from "lucide-react"
+
+const stats = [
+  { value: "500+", label: "Strategy Providers" },
+  { value: "₹2L+", label: "Earned Monthly" },
+  { value: "10K+", label: "Copiers" },
+]
 
 export function SocialTradingSection() {
   return (
     <section className="py-20 lg:py-28 bg-background">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-          {/* Left Content */}
-          <div>
-            <p className="text-sm font-semibold text-primary uppercase tracking-wider mb-3">Social Trading</p>
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground mb-6 text-balance">
-              Social Trading Ecosystem
-            </h2>
-            <p className="text-lg text-muted-foreground mb-8">
-              Connect, copy, and grow with experienced market participants. Diversify strategies and optimize portfolio performance through transparent leaderboards and performance metrics.
+        <div className="text-center mb-12 max-w-3xl mx-auto">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground mb-3 text-balance">
+            Your trading skill is worth money. Start charging for it.
+          </h2>
+          <p className="text-base font-semibold text-primary">Social Trading Ecosystem</p>
+        </div>
+
+        <div className="grid lg:grid-cols-2 gap-8 mb-12">
+          <div className="bg-white border border-border rounded-3xl p-8 shadow-sm">
+            <h3 className="text-xl font-semibold text-foreground mb-4">If you're a trader</h3>
+            <p className="text-muted-foreground leading-relaxed">
+              Create your strategy profile, build your follower base, set your monthly fee,
+              and start earning from every trader who copies you. We handle payments. You focus on trading.
             </p>
-
-            <Button size="lg" className="bg-primary hover:bg-primary/90 text-white px-8">
-              Explore Copy Trading
-              <ArrowRight className="w-5 h-5 ml-2" />
-            </Button>
           </div>
+          <div className="bg-white border border-border rounded-3xl p-8 shadow-sm">
+            <h3 className="text-xl font-semibold text-foreground mb-4">If you're just starting</h3>
+            <p className="text-muted-foreground leading-relaxed">
+              Not a trader yet? Browse verified providers, check their track record, and start
+              copying with one click. No charts. No analysis. No stress.
+            </p>
+          </div>
+        </div>
 
-          {/* Right - Visual */}
-          <div className="relative">
-            <div className="bg-gradient-to-br from-primary/5 to-muted rounded-3xl p-6 lg:p-8">
-              {/* Trader Cards */}
-              <div className="space-y-4">
-                {[
-                  { name: "Alex Chen", profit: "+42.5%", followers: "12.4k", rank: 1 },
-                  { name: "Sarah Miller", profit: "+38.2%", followers: "9.8k", rank: 2 },
-                  { name: "John Davis", profit: "+35.7%", followers: "7.2k", rank: 3 },
-                ].map((trader, index) => (
-                  <div key={index} className="bg-white rounded-xl p-4 flex items-center gap-4 shadow-sm hover:shadow-md transition-shadow">
-                    <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center">
-                      <span className="text-primary font-bold">{trader.rank}</span>
-                    </div>
-                    <div className="flex-1">
-                      <div className="font-semibold text-foreground">{trader.name}</div>
-                      <div className="flex items-center gap-4 text-sm text-muted-foreground">
-                        <span className="flex items-center gap-1">
-                          <Users className="w-4 h-4" />
-                          {trader.followers}
-                        </span>
-                        <span className="flex items-center gap-1 text-primary">
-                          <TrendingUp className="w-4 h-4" />
-                          {trader.profit}
-                        </span>
-                      </div>
-                    </div>
-                    <Button variant="outline" size="sm" className="text-primary border-primary hover:bg-primary hover:text-white">
-                      Copy
-                    </Button>
-                  </div>
-                ))}
-              </div>
-
-              {/* Stats Banner */}
-              <div className="mt-6 bg-primary text-white rounded-xl p-4 grid grid-cols-3 gap-2 sm:flex sm:items-center sm:justify-center sm:gap-8">
-                <div className="text-center">
-                  <div className="text-lg sm:text-2xl font-bold">50K+</div>
-                  <div className="text-xs sm:text-sm text-white/70">Active Traders</div>
-                </div>
-                <div className="hidden sm:block w-px h-10 bg-white/20" />
-                <div className="text-center">
-                  <div className="text-lg sm:text-2xl font-bold">$2.5B+</div>
-                  <div className="text-xs sm:text-sm text-white/70">Copied Volume</div>
-                </div>
-                <div className="hidden sm:block w-px h-10 bg-white/20" />
-                <div className="text-center">
-                  <div className="text-lg sm:text-2xl font-bold">180+</div>
-                  <div className="text-xs sm:text-sm text-white/70">Countries</div>
-                </div>
-              </div>
+        <div className="grid grid-cols-3 gap-4 sm:gap-6 mb-10">
+          {stats.map((s, i) => (
+            <div key={i} className="text-center bg-muted/40 border border-border rounded-2xl p-6">
+              <div className="text-2xl sm:text-3xl lg:text-4xl font-bold brand-gradient-text">{s.value}</div>
+              <p className="text-xs sm:text-sm text-muted-foreground mt-1">{s.label}</p>
             </div>
-          </div>
+          ))}
+        </div>
+
+        <div className="text-center">
+          <Button size="lg" className="bg-primary hover:bg-primary/90 text-white rounded-full px-8 shadow-lg shadow-emerald-500/30">
+            Become a Strategy Provider — Apply Now
+            <ArrowRight className="w-5 h-5 ml-2" />
+          </Button>
         </div>
       </div>
     </section>

@@ -13,6 +13,8 @@ import MetalsMarket from './pages/markets/metals/Metals'
 import CfdsMarket from './pages/markets/cfds/Cfds'
 import AccountTypes from './pages/accounts/types/Types'
 import DepositsWithdrawals from './pages/accounts/deposits-withdrawals/Deposits-withdrawals'
+import TradingPlatform from './pages/tools/trading-platform/Trading-platform'
+import Heatmap from './pages/tools/heatmap/Heatmap'
 
 function App() {
   return (
@@ -31,6 +33,8 @@ function App() {
       <Route path="/markets/cfds" element={<CfdsMarket />} />
       <Route path="/accounts/types" element={<AccountTypes />} />
       <Route path="/accounts/deposits-withdrawals" element={<DepositsWithdrawals />} />
+      <Route path="/tools/trading-platform" element={<TradingPlatform />} />
+      <Route path="/tools/heatmap" element={<Heatmap />} />
     </Routes>
   )
 }

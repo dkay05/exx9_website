@@ -88,13 +88,17 @@ export function PipCalculatorSection() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
         {/* Header */}
-        <div className="text-center mb-12">
-          <p className="text-sm font-semibold text-primary uppercase tracking-wider mb-3">Trading Tools</p>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-4 text-balance">
-            Live Pip Value Calculator
+        <div className="text-center mb-12 max-w-3xl mx-auto">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-3 text-balance">
+            Know exactly what you're risking before every trade.
           </h2>
-          <p className="text-lg text-white/80 max-w-2xl mx-auto">
-            Instantly calculate your pip value and potential profit or loss across all instruments.
+          <p className="text-base font-semibold text-primary mb-4">
+            Live Pip Value Calculator
+          </p>
+          <p className="text-base sm:text-lg text-white/80">
+            Most traders lose not because their strategy is wrong — but because they never calculated
+            their actual risk. Use exx9's live pip calculator to know your pip value, position size,
+            and potential loss in real rupees — before you copy a single trade.
           </p>
         </div>
 
@@ -236,26 +240,16 @@ export function PipCalculatorSection() {
 
           {/* Info Panel */}
           <div className="lg:col-span-2 space-y-4">
-            {/* How it works */}
+            {/* AI-powered risk engine */}
             <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-6 shadow-lg">
               <div className="flex items-center gap-2 mb-4">
                 <TrendingUp className="w-5 h-5 text-primary" />
-                <h3 className="font-semibold text-white">How It Works</h3>
+                <h3 className="font-semibold text-white">AI-Powered Risk Engine</h3>
               </div>
-              <div className="space-y-3 text-sm text-white/80">
-                <div className="flex gap-3">
-                  <span className="w-6 h-6 bg-primary/10 text-primary rounded-full flex items-center justify-center font-bold text-xs flex-shrink-0">1</span>
-                  <p>Select your trading instrument and account base currency.</p>
-                </div>
-                <div className="flex gap-3">
-                  <span className="w-6 h-6 bg-primary/10 text-primary rounded-full flex items-center justify-center font-bold text-xs flex-shrink-0">2</span>
-                  <p>Choose your lot type (Standard, Mini, or Micro) and enter the number of lots.</p>
-                </div>
-                <div className="flex gap-3">
-                  <span className="w-6 h-6 bg-primary/10 text-primary rounded-full flex items-center justify-center font-bold text-xs flex-shrink-0">3</span>
-                  <p>Enter the number of pips — the result updates instantly.</p>
-                </div>
-              </div>
+              <p className="text-sm text-white/80 leading-relaxed">
+                Our AI-powered risk engine automatically adjusts your copied lot sizes based on
+                your account balance — so you never over-leverage by accident.
+              </p>
             </div>
 
             {/* Lot Size Reference */}
@@ -280,7 +274,7 @@ export function PipCalculatorSection() {
 
             {/* Disclaimer */}
             <p className="text-xs text-white/60 px-1 leading-relaxed">
-              * Pip values are calculated using indicative exchange rates and are for informational purposes only. Actual values may vary based on live market conditions.
+              Trading involves risk. This calculator helps you manage it — not eliminate it.
             </p>
           </div>
 

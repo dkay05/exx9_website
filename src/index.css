@@ -79,6 +79,38 @@
     color: transparent;
   }
   .feature-card {
-    @apply bg-white border border-border rounded-3xl p-6 sm:p-8 shadow-sm hover:shadow-xl hover:shadow-emerald-500/10 transition-all duration-300;
+    @apply relative bg-white border border-border rounded-3xl p-6 sm:p-8 shadow-sm hover:shadow-2xl hover:shadow-emerald-500/15 hover:border-emerald-200 hover:-translate-y-1 transition-all duration-300;
+  }
+  .glow-emerald {
+    box-shadow: 0 0 60px -10px rgb(16 185 129 / 0.5);
+  }
+  .dot-grid {
+    background-image: radial-gradient(circle at 1px 1px, rgb(16 185 129 / 0.12) 1px, transparent 0);
+    background-size: 28px 28px;
+  }
+  .dot-grid-dark {
+    background-image: radial-gradient(circle at 1px 1px, rgb(255 255 255 / 0.07) 1px, transparent 0);
+    background-size: 28px 28px;
+  }
+  .eyebrow {
+    @apply inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-50 text-emerald-700 border border-emerald-100 text-xs font-semibold uppercase tracking-[0.18em];
+  }
+  .eyebrow-dark {
+    @apply inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/5 text-emerald-300 border border-white/10 text-xs font-semibold uppercase tracking-[0.18em];
+  }
+  .display-h2 {
+    @apply text-3xl sm:text-4xl lg:text-[2.75rem] font-bold tracking-tight leading-[1.1] text-balance;
+  }
+  .bg-tint {
+    background-color: #f4f9f4;
+  }
+  .bg-light-mint {
+    background-color: #f0fdf4;
+  }
+  .bg-deep-black {
+    background-color: #0a0a0a;
+  }
+  .border-mint {
+    border-color: #bbf7d0;
   }
 }

@@ -8,21 +8,31 @@ export function MobileAppSection() {
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           {/* Left Content */}
           <div className="text-center lg:text-left">
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6 text-balance">
-              VXNESS Mobile App
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-3 text-balance">
+              Your entire trading business — in your pocket.
             </h2>
-            <p className="text-lg text-white/80 mb-8 max-w-lg mx-auto lg:mx-0">
-              Trade multipliers and accumulator options directly from your mobile device. Available for Android & iOS.
+            <p className="text-base font-semibold text-white/90 mb-5">
+              exx9 Mobile App — iOS & Android
             </p>
+            <p className="text-base sm:text-lg text-white/80 mb-6 max-w-lg mx-auto lg:mx-0">
+              Copy trades, manage strategies, track earnings, check live markets, get alerts, and
+              withdraw funds — all from your phone.
+            </p>
+
+            <ul className="space-y-2 mb-8 text-sm text-white/85 max-w-lg mx-auto lg:mx-0">
+              <li className="flex items-start gap-2"><span className="text-white">✓</span> Instant trade notifications with P&amp;L details.</li>
+              <li className="flex items-start gap-2"><span className="text-white">✓</span> One-tap copy management — pause or stop anytime.</li>
+              <li className="flex items-start gap-2"><span className="text-white">✓</span> Live earnings dashboard — updated every second.</li>
+            </ul>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
               <Button size="lg" variant="secondary" className="bg-white text-foreground hover:bg-white/90 px-6">
                 <Apple className="w-5 h-5 mr-2" />
-                App Store
+                Download on App Store
               </Button>
               <Button size="lg" variant="secondary" className="bg-white text-foreground hover:bg-white/90 px-6">
                 <Play className="w-5 h-5 mr-2" />
-                Google Play
+                Get it on Google Play
               </Button>
             </div>
 

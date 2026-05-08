@@ -36,16 +36,20 @@ export function PricingTableSection() {
     : prices.filter(p => p.category === activeTab)
 
   return (
-    <section className="py-20 lg:py-28 bg-muted/30">
+    <section className="py-20 lg:py-28 bg-tint">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
-        <div className="text-center mb-12">
-          <p className="text-sm font-semibold text-primary uppercase tracking-wider mb-3">Live Pricing</p>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground mb-4 text-balance">
-            Real-Time Institutional Pricing Transparency
+        <div className="text-center mb-12 max-w-3xl mx-auto">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground mb-3 text-balance">
+            No Hidden Fees. No Re-quotes. Ever.
           </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Trade with full price visibility and live market execution.
+          <p className="text-base font-semibold text-primary mb-4">
+            Real-Time Institutional Pricing Transparency
+          </p>
+          <p className="text-base sm:text-lg text-muted-foreground">
+            Most platforms quietly make money off your spreads. We don't. exx9 shows you live,
+            real-time institutional pricing — the same rates banks and hedge funds get. What you
+            see is exactly what you pay. No markups. No surprises.
           </p>
         </div>
 
@@ -123,7 +127,7 @@ export function PricingTableSection() {
           {/* Table Footer */}
           <div className="bg-muted/30 px-6 py-4 border-t border-border">
             <p className="text-sm text-muted-foreground text-center">
-              Ultra-fast execution. Zero dealing desk intervention. Transparent spreads.
+              Prices update every second. All spreads shown are live market spreads — not estimated or averaged.
             </p>
           </div>
         </div>

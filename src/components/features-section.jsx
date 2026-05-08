@@ -1,51 +1,67 @@
-﻿import { Coins, Share2, Users2, Briefcase } from "lucide-react"
+import { Zap, Sparkles, History, Network } from "lucide-react"
 
 const features = [
   {
-    icon: Coins,
-    title: "Cash Rewards Program",
-    color: "bg-yellow-50 text-yellow-600",
+    icon: Zap,
+    title: "Copy Trading Engine",
+    description: "Millisecond execution. What the trader gets, you get. Same price. Same speed.",
+    accent: "from-emerald-400 to-green-500",
   },
   {
-    icon: Share2,
-    title: "Advanced Affiliate Infrastructure",
-    color: "bg-blue-50 text-blue-600",
+    icon: Sparkles,
+    title: "AI Strategy Builder",
+    description: "5 pre-built AI strategies back-tested across 10 years of market data. Pick one, deploy it, let the machine work.",
+    accent: "from-amber-400 to-emerald-500",
+    badge: "AI",
   },
   {
-    icon: Users2,
-    title: "Integrated Social Trading",
-    color: "bg-emerald-50 text-emerald-600",
+    icon: History,
+    title: "Backtesting Engine",
+    description: "Test any strategy on 10 years of historical data in seconds. Confidence backed by data, not hope.",
+    accent: "from-teal-400 to-emerald-500",
   },
   {
-    icon: Briefcase,
-    title: "Multi-Account Portfolio Access",
-    color: "bg-green-50 text-green-600",
+    icon: Network,
+    title: "Multi-Broker Integration",
+    description: "Already have a broker? Connect it. Works with all major Indian & global brokers.",
+    accent: "from-lime-400 to-emerald-500",
   },
 ]
 
 export function FeaturesSection() {
   return (
-    <section className="py-20 lg:py-28 bg-muted/30">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Section Header */}
-        <div className="text-center mb-16">
-          <p className="text-sm font-semibold text-primary uppercase tracking-wider mb-3">Infrastructure</p>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground mb-4">
-            Built for Performance & Growth
+    <section className="relative section-pad bg-foreground text-white overflow-hidden">
+      <div className="pointer-events-none absolute inset-0 dot-grid-dark opacity-50" />
+      <div className="pointer-events-none absolute -top-40 left-1/2 -translate-x-1/2 w-[600px] h-[600px] rounded-full bg-emerald-500/10 blur-3xl" />
+
+      <div className="relative section-container">
+        <div className="text-center mb-16 max-w-3xl mx-auto">
+          <span className="eyebrow-dark mb-5">● Performance</span>
+          <h2 className="display-h2 mt-5 mb-3">
+            Every feature has one goal: <br className="hidden sm:block" />
+            <span className="brand-gradient-text">to make you more money.</span>
           </h2>
+          <p className="text-base sm:text-lg text-white/70">
+            Built for Performance. Built for Growth.
+          </p>
         </div>
 
-        {/* Features Grid */}
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-6">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
           {features.map((feature, index) => (
             <div
               key={index}
-              className="bg-white rounded-2xl p-4 sm:p-6 text-center hover:shadow-lg transition-shadow border border-border"
+              className="group relative bg-white/[0.03] border border-white/10 rounded-3xl p-6 hover:bg-white/[0.06] hover:border-emerald-400/40 transition-all duration-300"
             >
-              <div className={`w-12 h-12 sm:w-16 sm:h-16 ${feature.color} rounded-xl sm:rounded-2xl flex items-center justify-center mx-auto mb-3 sm:mb-4`}>
-                <feature.icon className="w-6 h-6 sm:w-8 sm:h-8" />
+              {feature.badge && (
+                <span className="absolute top-4 right-4 px-2 py-0.5 rounded-full bg-emerald-500/20 text-emerald-300 text-[10px] font-bold tracking-wider border border-emerald-400/30">
+                  {feature.badge}
+                </span>
+              )}
+              <div className={`w-14 h-14 rounded-2xl bg-gradient-to-br ${feature.accent} flex items-center justify-center mb-5 shadow-lg shadow-emerald-500/30 group-hover:scale-110 transition-transform duration-300`}>
+                <feature.icon className="w-7 h-7 text-white" />
               </div>
-              <h3 className="text-sm sm:text-lg font-semibold text-foreground">{feature.title}</h3>
+              <h3 className="text-lg font-semibold mb-2">{feature.title}</h3>
+              <p className="text-sm text-white/65 leading-relaxed">{feature.description}</p>
             </div>
           ))}
         </div>

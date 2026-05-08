@@ -14,33 +14,34 @@ export function HeroSection() {
             className="absolute inset-0 w-full h-full object-cover"
           />
 
+          <div className="absolute inset-0 bg-gradient-to-r from-black/55 via-black/25 to-transparent" />
+
           <div className="relative px-6 sm:px-10 lg:px-14 py-14 sm:py-20 lg:py-24 min-h-[500px] sm:min-h-[600px] lg:min-h-[680px] flex">
             {/* Left content */}
             <div className="text-white max-w-2xl my-auto">
-              <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-[4.25rem] font-bold leading-[1.05] tracking-tight">
-                Trading should feel
-                <span className="relative inline-block ml-3">
-                  <span className="relative z-10">honest.</span>
-                  {/* Hand-drawn underline */}
-                  <svg className="absolute left-0 -bottom-2 w-full" viewBox="0 0 200 14" preserveAspectRatio="none" aria-hidden>
-                    <path d="M2 9 C 50 3, 110 13, 198 6" stroke="#fbcfe8" strokeWidth="4" fill="none" strokeLinecap="round" />
-                  </svg>
-                </span>
-                <span className="block mt-6 sm:mt-8 text-white/85 text-2xl sm:text-3xl lg:text-4xl font-medium">
-                  So we built a platform that doesn't hide the costs.
+              <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-[3.25rem] font-bold leading-[1.1] tracking-tight">
+                Copy Trading,
+                <span className="brand-gradient-text ml-3">Finally Done Right.</span>
+                <span className="block mt-5 sm:mt-6 text-white/85 text-base sm:text-lg lg:text-xl font-medium leading-relaxed">
+                  Stop guessing. Start copying the traders who actually make money.
+                  exx9 gives you real strategies, real results — no fluff, no hidden charges.
                 </span>
               </h1>
 
-              <div className="mt-12 sm:mt-14 flex flex-col sm:flex-row gap-3">
+              <div className="mt-10 sm:mt-12 flex flex-col sm:flex-row gap-3">
                 <OpenAccountDialog
                   trigger={
-                    <Button size="lg" className="bg-white text-emerald-700 hover:bg-white/90 rounded-full px-7 font-semibold">
-                      Open an account
+                    <Button size="lg" className="bg-emerald-500 hover:bg-emerald-400 text-white rounded-full px-7 font-semibold shadow-2xl shadow-emerald-500/40 hover:scale-[1.02] transition-transform">
+                      Start Free — First Month on Us
                       <ArrowRight className="w-4 h-4 ml-2" />
                     </Button>
                   }
                 />
+                <Button size="lg" variant="ghost" className="text-white hover:bg-white/15 rounded-full px-6 font-semibold border border-white/30">
+                  See How It Works →
+                </Button>
               </div>
+
             </div>
           </div>
         </div>

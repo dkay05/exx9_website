@@ -1,69 +1,69 @@
-﻿import { UserPlus, Wallet, LineChart, Download } from "lucide-react"
+import { UserPlus, Wallet, Users, Zap } from "lucide-react"
 
 const steps = [
   {
     number: "01",
     icon: UserPlus,
-    title: "Register Account",
-    description: "Complete a secure online registration within minutes.",
+    title: "Create Account",
+    description: "Sign up in 2 minutes. No documents. No hassle. Create your free exx9 account with just your email.",
   },
   {
     number: "02",
     icon: Wallet,
     title: "Fund Account",
-    description: "Choose from multiple global payment solutions.",
+    description: "Add money via UPI, bank transfer, debit card, or crypto. Minimum ₹500. Your funds are always in your control.",
   },
   {
     number: "03",
-    icon: LineChart,
-    title: "Execute Trades",
-    description: "Access deep liquidity with competitive pricing.",
+    icon: Users,
+    title: "Pick a Trader",
+    description: "Browse verified strategy providers. Check their win rate, drawdown, returns, and style. Pick one that matches your risk appetite.",
   },
   {
     number: "04",
-    icon: Download,
-    title: "Download Platform",
-    description: "Trade anytime via desktop, web, or mobile.",
+    icon: Zap,
+    title: "Copy on Autopilot",
+    description: "Every trade your chosen trader makes is mirrored in your account automatically — in real time. No charts. No analysis. No stress.",
   },
 ]
 
 export function StepsSection() {
   return (
-    <section className="py-20 lg:py-28 bg-background">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Section Header */}
-        <div className="text-center mb-16">
-          <p className="text-sm font-semibold text-primary uppercase tracking-wider mb-3">Get Started</p>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground mb-4">
-            Get Started in 4 Simple Steps
+    <section className="relative section-pad bg-gradient-to-b from-background to-emerald-50/30 overflow-hidden">
+      <div className="relative section-container">
+        <div className="text-center mb-16 max-w-3xl mx-auto">
+          <span className="eyebrow mb-5">● Onboarding</span>
+          <h2 className="display-h2 text-foreground mt-5 mb-3">
+            Up and running in <span className="brand-gradient-text">under 5 minutes.</span>
           </h2>
+          <p className="text-base sm:text-lg text-muted-foreground">
+            Get Started in 4 Simple Steps
+          </p>
         </div>
 
-        {/* Steps Grid */}
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
-          {steps.map((step, index) => (
-            <div key={index} className="relative">
-              {/* Connector Line */}
-              {index < steps.length - 1 && (
-                <div className="hidden lg:block absolute top-10 left-[60%] w-full h-[2px] bg-border" />
-              )}
-              
-              <div className="relative z-10 flex flex-col items-center text-center">
-                {/* Step Number & Icon */}
-                <div className="relative mb-6">
-                  <div className="w-20 h-20 bg-primary/10 rounded-2xl flex items-center justify-center">
-                    <step.icon className="w-8 h-8 text-primary" />
+        <div className="relative">
+          {/* Connector line */}
+          <div className="hidden lg:block absolute top-12 left-[12%] right-[12%] h-px bg-gradient-to-r from-transparent via-emerald-300 to-transparent" />
+
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 relative">
+            {steps.map((step, index) => (
+              <div key={index} className="relative">
+                <div className="relative z-10 flex flex-col items-center text-center px-2">
+                  <div className="relative mb-6">
+                    <div className="w-24 h-24 rounded-3xl brand-gradient flex items-center justify-center shadow-xl shadow-emerald-500/30">
+                      <step.icon className="w-10 h-10 text-white" />
+                    </div>
+                    <div className="absolute -top-2 -right-2 w-9 h-9 bg-white border-2 border-emerald-200 rounded-full flex items-center justify-center shadow-md">
+                      <span className="text-[11px] font-bold text-emerald-700 tabular-nums">{step.number}</span>
+                    </div>
                   </div>
-                  <div className="absolute -top-2 -right-2 w-8 h-8 bg-primary rounded-full flex items-center justify-center">
-                    <span className="text-xs font-bold text-white">{step.number}</span>
-                  </div>
+
+                  <h3 className="text-lg font-semibold text-foreground mb-2">{step.title}</h3>
+                  <p className="text-sm text-muted-foreground leading-relaxed">{step.description}</p>
                 </div>
-                
-                <h3 className="text-lg font-semibold text-foreground mb-2">{step.title}</h3>
-                <p className="text-sm text-muted-foreground">{step.description}</p>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       </div>
     </section>

@@ -50,9 +50,12 @@ export function EconomicCalendarSection() {
   const [filter, setFilter] = useState("All")
   const [expanded, setExpanded] = useState(null)
 
-  const filters = ["All", "High", "Medium", "Low"]
+  const filters = ["All", "High Impact", "Medium Impact", "Today", "This Week"]
+  const filterImpactMap = { "High Impact": "High", "Medium Impact": "Medium" }
 
-  const filtered = filter === "All" ? events : events.filter(e => e.impact === filter)
+  const filtered = filter === "All" || filter === "Today" || filter === "This Week"
+    ? events
+    : events.filter(e => e.impact === filterImpactMap[filter])
 
   const now = new Date()
   const timeLabel = now.toLocaleDateString("en-US", { weekday: "long", year: "numeric", month: "long", day: "numeric" })
@@ -62,13 +65,17 @@ export function EconomicCalendarSection() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
         {/* Header */}
-        <div className="text-center mb-12">
-          <p className="text-sm font-semibold text-primary uppercase tracking-wider mb-3">Economic Calendar</p>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground mb-4 text-balance">
-            Live Market-Moving Events
+        <div className="text-center mb-12 max-w-3xl mx-auto">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground mb-3 text-balance">
+            The market doesn't wait. Neither should you.
           </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Stay ahead of major economic releases and central bank decisions that drive volatility.
+          <p className="text-base font-semibold text-primary mb-4">
+            Live Market-Moving Events — tracked in real time
+          </p>
+          <p className="text-base sm:text-lg text-muted-foreground">
+            Interest rate decisions. CPI reports. NFP data. GDP releases. These events move markets in seconds.
+            exx9 tracks every high-impact economic event globally and shows you — in real time — what's happening,
+            what's expected, and what actually came out.
           </p>
         </div>
 
@@ -95,18 +102,12 @@ export function EconomicCalendarSection() {
               onClick={() => setFilter(f)}
               className={`px-5 py-2 rounded-full text-sm font-medium transition-all border ${
                 filter === f
-                  ? f === "High"   ? "bg-red-500 text-white border-red-500"
-                  : f === "Medium" ? "bg-yellow-500 text-white border-yellow-500"
-                  : f === "Low"    ? "bg-blue-500 text-white border-blue-500"
-                  :                  "bg-primary text-white border-primary"
+                  ? f === "High Impact"   ? "bg-red-500 text-white border-red-500"
+                  : f === "Medium Impact" ? "bg-yellow-500 text-white border-yellow-500"
+                  :                         "bg-primary text-white border-primary"
                   : "bg-white text-muted-foreground border-border hover:bg-muted"
               }`}
             >
-              {f !== "All" && (
-                <span className={`inline-block w-2 h-2 rounded-full mr-2 ${
-                  f === "High" ? "bg-red-300" : f === "Medium" ? "bg-yellow-300" : "bg-blue-300"
-                } ${filter === f ? "opacity-100" : ""}`} />
-              )}
               {f}
             </button>
           ))}
@@ -200,6 +201,13 @@ export function EconomicCalendarSection() {
               ))}
             </div>
           </div>
+        </div>
+
+        <div className="mt-8 text-center">
+          <p className="text-base sm:text-lg text-muted-foreground">
+            Set alerts for events that matter →{" "}
+            <a href="#" className="font-semibold text-primary hover:underline">Enable Notifications</a>
+          </p>
         </div>
 
       </div>
